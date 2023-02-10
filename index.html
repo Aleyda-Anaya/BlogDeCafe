@@ -17,54 +17,67 @@
                 </li>
 
                 <li>
-                    <a href="#nosotros.html">Nosotros</a>
+                    <a href="#nosotros">Nosotros</a>
                 </li>
 
                 <li>
-                    <a href="#cursos.html">Cursos</a>
+                    <a href="#cursos">Cursos</a>
                 </li>
 
                 <li>
-                    <a href="#contacto.html">Contacto</a>
+                    <a href="#contactanos">Contacto</a>
                 </li>
             </ul>
         </nav>
 
         <section>
-            <h1>Blog de cafe con consejos y cursos</h1>
-            <h3>Aprender de los expertos con las mejores recetas y consejos</h3>
+            <img src="./assets/img/female-barista-prepares-espresso-from-coffee-machine-in-caf.jpg" alt="baristas">
+            <div class="content-header">
+                <h1>Blog de cafe con consejos y cursos</h1>
+                <h3>Aprender de los expertos con las mejores recetas y consejos</h3>
+                <button class="arrow" onclick="smoothScroll()">
+                    <div id="arrow"></div>
+                </button>
+            </div>
         </section>
     </header>
 
-    <div class="mainContainer">
+    <div class="mainContainer" id="mainContainer">
         <main>
+            <h2>Nuestro Blog</h2>
             <section>
-                <h2>Nuestro Blog</h2>
-                <article class="main__section__article">
-                    <img src="https://picsum.photos/200/300" alt="imagenes random">
-                    <h3>Tres Deliciosas Recetas De Cafe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
-                    <button>leer entrada</button>
+                <article class="card">
+                    <img src="https://coruscating-capybara-5b8cef.netlify.app/img/img1.jpg" alt="imagen de cafe">
+                    <div>
+                        <h3>Tres Deliciosas Recetas De Cafe</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
+                        <button>leer entrada</button>
+                    </div>
                 </article>
         
-                <article class="main__section__article">
-                    <img src="https://picsum.photos/200" alt="imagenes random">
-                    <h3>Tres Deliciosas Recetas De Cafe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
-                    <button>leer entrada</button>
+                <article class="card">
+                    <img src="https://coruscating-capybara-5b8cef.netlify.app/img/img2.jpg" alt="imagenes random">
+                    <div>
+                        <h3>Tres Deliciosas Recetas De Cafe</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
+                        <button>leer entrada</button>
+                    </div>
                 </article>
         
-                <article class="main__section__article">
-                    <img src="https://picsum.photos/200/300" alt="imagenes random">
-                    <h3>Tres Deliciosas Recetas De Cafe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
-                    <button>leer entrada</button>
-                </article>        
+                <article class="card">
+                    <img src="https://coruscating-capybara-5b8cef.netlify.app/img/card4cursos.jpg" alt="imagenes random">
+                    <div>
+                        <h3>Tres Deliciosas Recetas De Cafe</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni libero ullam odit adipisci reiciendis explicabo quis exercitationem blanditiis temporibus possimus ipsum quasi perferendis facere maiores nesciunt, expedita, velit repudiandae.</p>
+                        <button>leer entrada</button>
+                    </div>
+                </article> 
+
             </section>
         </main>
     
         <aside>
-            <h3>Nuestros Cursos y Talleres</h3>
+            <h3>Cursos y Talleres</h3>
             <section>
                 <article class="main__aside__article">
                     <h4>Tecnicas de extraccion de Cafe</h4>
@@ -87,6 +100,6 @@
             </section>
         </aside>
     </div>
-
+    <script src="./main.js"></script>
 </body>
 </html>

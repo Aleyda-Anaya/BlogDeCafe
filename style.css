@@ -1,5 +1,9 @@
+:root{
+    --primary-color: #d09030;
+    --secondary-color: #2e2e2e;
+}
 body{    
-    background-color: #eee9e4;
+    background-color: #fffbef;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,16 +11,18 @@ body{
 header{
     width: 100%;
     position: relative;
+    background: black
 }
 
 
 nav{
-    background-color: #809a70;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-around;
     min-height: 100px;
     width: 100%;
     position: fixed;
+    z-index: 3;
 }
 
 nav>a{
@@ -33,136 +39,231 @@ nav>a>span{
     font-weight: bold;
 }
 
-ul{
+nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 28px;
     list-style: none;
     padding: 0;
 }
 
-ul li>a{
+nav ul li{
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color .2s ease-in;
+}
+
+nav ul li:hover{
+    background-color: var(--primary-color);
+}
+
+nav ul li>a{
+    transition: color .2s ease-in;
     text-decoration: none;
     color: #eee9e4;
     font-size: 20px;
 }
 
+nav ul li:hover a{
+    color: var(--secondary-color);
+}
+
 header > section{
-    background: url(./assets/img/female-barista-prepares-espresso-from-coffee-machine-in-caf.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
     width: 100%;
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-top: 100px;
 }
 
-header > section >h1{
+header > section > img{
+    width: 100%;
+    height: calc(100vh - 100px);
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.6;
+    filter: contrast(0.5) saturate(1.5);
+}
+
+header section .content-header{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+
+header > section .content-header h1{
     font-size: 60px;
     color: #eee9e4;
     max-width: 500px;
-    margin: 120px 0 0 0;
+    margin: 0;
 }
 
-header > section >h3{
+header > section> .content-header> h3{
     font-size: 30px;
     color: #eee9e4;
     width: fit-content;
-    text-shadow: 3px 3px 3px black;
     font-weight: normal;
     text-align: center;
+    margin: 0;
 }
+
+.arrow{
+    position: absolute;
+    animation: arrow 1.5s infinite backwards;
+    bottom: -105px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow:hover #arrow{
+    filter: brightness(1.3) saturate(1.3);
+    scale: 1.2;
+    transition: scale .3s ease-in;    
+}
+
+#arrow{
+    transition: scale .3s ease-in;
+    height: 55px;
+    width: 55px;
+    background-color: var(--primary-color);
+    clip-path: path("m 46.19716,27.667926 q 0,-0.971435 -0.647623,-1.619059 L 42.275441,22.77477 q -0.647627,-0.647626 -1.619062,-0.647626 -0.971434,0 -1.619057,0.647626 l -6.800051,6.800048 V 11.51331 q 0,-0.935455 -0.683602,-1.6190587 -0.683602,-0.6836025 -1.61906,-0.6836025 h -4.605325 q -0.935455,0 -1.619058,0.6836025 -0.683604,0.6836037 -0.683604,1.6190587 V 29.574818 L 16.226574,22.77477 q -0.683603,-0.683606 -1.61906,-0.683606 -0.935457,0 -1.61906,0.683606 l -3.2740969,3.274097 q -0.6476236,0.647624 -0.6476236,1.619059 0,0.971435 0.6476236,1.61906 L 22.73879,42.31142 l 3.274098,3.274097 q 0.647624,0.647622 1.61906,0.647622 0.971436,0 1.619059,-0.647622 L 32.525105,42.31142 45.549537,29.286986 q 0.647623,-0.647625 0.647623,-1.61906 z m 9.066733,-0.03596 q 0,7.519631 -3.705847,13.869941 -3.705845,6.350314 -10.056159,10.056159 -6.350309,3.705845 -13.869939,3.705845 -7.519632,0 -13.869943,-3.705845 Q 7.4116945,47.852201 3.7058478,41.501887 0,35.151578 0,27.631948 0,20.112315 3.7058478,13.762004 7.4116945,7.4116938 13.762005,3.705847 20.112316,0 27.631948,0 q 7.51963,0 13.869939,3.705847 6.350314,3.7058468 10.056159,10.056157 3.705847,6.350311 3.705847,13.869944 z");
+}
+
+@keyframes arrow {
+    0%{
+        bottom: -105px;
+    }
+
+    50%{
+        bottom: -115px;
+    }
+
+    100%{
+        bottom: -105px;
+    }
+    
+}
+
 .mainContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 35px;
-    padding-top: 100px;
+    margin-top: 50px;
+    flex-direction: row-reverse;
+    position: relative;
 }
 
 main{
     width: 70%;
-    max-width: 800px;
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
 }
 
-main>section>h2{
-    color: #809a70;
+main>h2{
+    color: var(--primary-color);
     font-size: 40px;
     margin: 0;
 }
 
 main>section{
     display: flex;
-    flex-direction: column;
     gap: 20px;
     width: 100%;
     align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.main__section__article{
-    height: calc(100vh - 100px);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411),
-                -5px -5px 5px white;
-    padding: 25px;
-    margin: 15px 0;
+.card{
+    border: solid 1px var(--primary-color);
+    margin: 30px 0;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
 
 }
-.main__section__article>img{
-    height: 350px;
-    border-radius: 8px;
+.card>img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
-.main__section__article>h3{
-    color: #809a70;
+.card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card div>h3{
+    color: var(--primary-color);
     font-size: 28px;
+    text-align: center;
+    margin: 0;
 }
 
-.main__section__article>p{
+.card div>p{
     line-height: 1.4;
 }
 
-.main__section__article>button{
+.card div>button{
     width: max-content;
-    background-color: #809a70;
+    background-color: var(--primary-color);
     color: #eee9e4;
     border-radius: 8px;
     border: none;
-    padding: 20px 25px 12px 25px;
+    padding: 16px;
     font-size: 20px;
 }
 
 aside{
-    width: 300px;
+    padding: 25px;
+    min-height: calc(100vh - 100px);
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    position: sticky;
+    top: 100px;
+    border-right: solid 1px var(--primary-color);
 }
 
 aside>h3{
-    color: #809a70;
+    color: var(--primary-color);
     font-size: 30px;
-    width: 220px;
     margin: 0;
+    margin-bottom: 25px;
 }
 
 aside>section{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+}
+
+.main__aside__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main__aside__article>h4{
     font-size: 18px;
-    width: 220px;
     margin: 0;
 }
 
@@ -176,12 +277,12 @@ aside>section{
 }
 
 .main__aside__article>div>p>span{
-    color: #809a70;
+    color: var(--primary-color);
 }
 
 .main__aside__article>button{
     width: max-content;
-    background-color: #809a70;
+    background-color: var(--primary-color);
     color: #eee9e4;
     border-radius: 8px;
     border: none;
