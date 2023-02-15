@@ -289,3 +289,34 @@ aside>section{
     padding: 15px;
     font-size: 15px;
 }
+.about{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-between;
+    background: linear-gradient(0deg,#eee9e6 50%, #ece3db 50%);
+    align-items: center;
+}
+.about > h2 {
+    color: var(--primary-color);
+    font-size: 40px;
+    margin: 30px;
+} 
+.about > div{
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.about > div img{
+    width: 90vh;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px 15px #2e2e2e;
+}
+.about >div img:hover{-webkit-transform:scale(.9);transform:scale(.9);}
+.img {overflow:hidden;}
+.about > div p {
+    width: 500px;
+    margin-top: 40px;
+}
