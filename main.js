@@ -24,3 +24,4 @@ function smoothScroll() {
   }
 
   var mainContainer = document.getElementById("mainContainer");
+  
