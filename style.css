@@ -320,3 +320,67 @@ aside>section{
     width: 500px;
     margin-top: 40px;
 }
+
+
+#cursos{
+    display: flex;/* propiedad para mover hijos u organizar*/
+    flex-direction: column;
+    justify-content: center;/* solo funcion si esta con display flex*/
+    align-items: center;/*solo funcion si esta con display flex*/
+  }
+  #cursos h2{
+    color: var(--primary-color);
+    font-size: 30px;
+
+  }
+
+  .cursos{
+    display: flex;/* propiedad para mover hijos u organizar*/
+    justify-content: center;/* solo funcion si esta con display flex*/
+    align-items: center;/*solo funcion si esta con display flex*/
+    padding: 20px;
+    gap: 25px;/* da espacios entre los hijos solo funciona con displayflex*/
+    flex-wrap: wrap;/* organiza contenido acorde al tama;o se adapta a pantalla*/
+  }
+
+  .cursos .Card{
+    width: 360px;
+    height: fit-content;/*fit conte se ajusta el alto al contenido*/
+    border-radius: 15px;
+    overflow: hidden;/* esconde el excendente de bordes*/
+    box-shadow: 0 0 10px black;
+  }
+  
+  .cursos .Card img{
+    width: 100%;/* ancho*/
+    max-height: 240px;/*alto maximo*/
+    object-fit: cover;/* no deformar imagen8*/
+  }
+  .cursos .contenido-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 15px;
+  }
+  .cursos .contenido-card h3{
+    text-align: center;/* alinea el texto*/
+    color: var(--primary-color);
+    font-size: 23px;
+  
+  }
+  .cursos .contenido-card p{
+    text-align: center;
+    line-height: 1.4;
+  }
+  .cursos .contenido-card button{
+    padding: 10px 30px;/* separar los hijos del contenedor*/
+    border-radius: 5px; /*borde redondo */
+    border: solid 3px var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    
+  
+  }
