@@ -289,3 +289,173 @@ aside>section{
     padding: 15px;
     font-size: 15px;
 }
+.about{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-between;
+    background: linear-gradient(0deg,#eee9e6 50%, #ece3db 50%);
+    align-items: center;
+}
+.about > h2 {
+    color: var(--primary-color);
+    font-size: 40px;
+    margin: 30px;
+} 
+.about > div{
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.about > div img{
+    width: 90vh;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px 15px #2e2e2e;
+}
+.about >div img:hover{-webkit-transform:scale(.9);transform:scale(.9);}
+.img {overflow:hidden;}
+.about > div p {
+    width: 500px;
+    margin-top: 40px;
+}
+
+
+#cursos{
+    display: flex;/* propiedad para mover hijos u organizar*/
+    flex-direction: column;
+    justify-content: center;/* solo funcion si esta con display flex*/
+    align-items: center;/*solo funcion si esta con display flex*/
+  }
+  #cursos h2{
+    color: var(--primary-color);
+    font-size: 30px;
+
+  }
+
+  .cursos{
+    display: flex;/* propiedad para mover hijos u organizar*/
+    justify-content: center;/* solo funcion si esta con display flex*/
+    align-items: center;/*solo funcion si esta con display flex*/
+    padding: 20px;
+    gap: 25px;/* da espacios entre los hijos solo funciona con displayflex*/
+    flex-wrap: wrap;/* organiza contenido acorde al tama;o se adapta a pantalla*/
+  }
+
+  .cursos .Card{
+    width: 360px;
+    height: fit-content;/*fit conte se ajusta el alto al contenido*/
+    border-radius: 15px;
+    overflow: hidden;/* esconde el excendente de bordes*/
+    box-shadow: 0 0 10px black;
+  }
+  
+  .cursos .Card img{
+    width: 100%;/* ancho*/
+    max-height: 240px;/*alto maximo*/
+    object-fit: cover;/* no deformar imagen8*/
+  }
+  .cursos .contenido-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 15px;
+  }
+  .cursos .contenido-card h3{
+    text-align: center;/* alinea el texto*/
+    color: var(--primary-color);
+    font-size: 23px;
+  
+  }
+  .cursos .contenido-card p{
+    text-align: center;
+    line-height: 1.4;
+  }
+  .cursos .contenido-card button{
+    padding: 10px 30px;/* separar los hijos del contenedor*/
+    border-radius: 5px; /*borde redondo */
+    border: solid 3px var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    
+  
+  }
+  /*contactanos*/
+  #contacto{
+    margin-bottom: 4rem;
+  }
+  .titulo-seccion{
+    color: #d09030;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .contacto__form{
+    margin: 0 auto;
+    padding: 0 4rem;
+    max-width: 100rem;
+  }
+  .contacto__form .row{
+    display: flex;
+    gap: 2rem;
+  }
+  @media (max-width: 768px){
+    .contacto__form .row{
+        flex-wrap: wrap;
+    }
+  }
+  .contacto__form .row input,
+  .contacto__form  textarea{
+    width: 100%;
+    padding: 1.3rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #eeeeee;
+    outline: none;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
+  }
+  .contacto__form  textarea{
+    margin-top: 2rem;
+    padding: 2rem;
+    width: calc(100% - 40px);
+    resize: none;
+  }
+  .contacto__form .btn-enviar{
+    border: none;
+    font-size: 1rem;
+    background-color: #eeeeee;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+  }
+  .contacto__form .btn-enviar:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: #eeeeee;
+    transition: transform 400ms linear;
+    transform-origin: left bottom;
+    transform: scale(1.02);
+  }
+  
+  
+  input:invalid,
+  textarea:invalid,
+  .error{
+    outline: solid .5rem #a82700 !important;
+  }
+  .p-form {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .p-principal {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  
+  }
