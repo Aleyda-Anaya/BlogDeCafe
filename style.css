@@ -384,3 +384,78 @@ aside>section{
     
   
   }
+  /*contactanos*/
+  #contacto{
+    margin-bottom: 4rem;
+  }
+  .titulo-seccion{
+    color: #d09030;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .contacto__form{
+    margin: 0 auto;
+    padding: 0 4rem;
+    max-width: 100rem;
+  }
+  .contacto__form .row{
+    display: flex;
+    gap: 2rem;
+  }
+  @media (max-width: 768px){
+    .contacto__form .row{
+        flex-wrap: wrap;
+    }
+  }
+  .contacto__form .row input,
+  .contacto__form  textarea{
+    width: 100%;
+    padding: 1.3rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #eeeeee;
+    outline: none;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
+  }
+  .contacto__form  textarea{
+    margin-top: 2rem;
+    padding: 2rem;
+    width: calc(100% - 40px);
+    resize: none;
+  }
+  .contacto__form .btn-enviar{
+    border: none;
+    font-size: 1rem;
+    background-color: #eeeeee;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+  }
+  .contacto__form .btn-enviar:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: #eeeeee;
+    transition: transform 400ms linear;
+    transform-origin: left bottom;
+    transform: scale(1.02);
+  }
+  
+  
+  input:invalid,
+  textarea:invalid,
+  .error{
+    outline: solid .5rem #a82700 !important;
+  }
+  .p-form {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .p-principal {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  
+  }

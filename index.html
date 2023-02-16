@@ -193,6 +193,42 @@
         
       </section>
 
+      <section id="contacto">
+        <h3 class="titulo-seccion">Contactanos</h3>
+  
+  
+        <form class="contacto__form" action="https://formspree.io/f/xyyaejew" method="post">
+  
+          <div class="row">
+            <input
+              name="nombre"
+              pattern="[a-zA-Z ]{2,254}"
+              type="text"
+              placeholder="Nombre Completo"
+              class="input-mitad"
+            />
+            <input
+              name="correo"
+              type="email"
+              placeholder="Email"
+              class="input-mitad"
+            />
+          </div>
+  
+          <textarea
+            name="mensaje"
+            minlength="30"
+            cols="5"
+            rows="5"
+            placeholder="Tu Mensaje..."
+            class="input-full"></textarea>
+  
+          <button class="btn-enviar" type="submit">Enviar Mensaje</button>
+        </form>
+        <p class="p-form">¡No dudes en llenar el formulario!</p>
+      </section>
+   
+
     <script src="./main.js"></script>
 </body>
 </html>
