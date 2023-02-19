@@ -8,26 +8,29 @@
     <title>Coffe</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
-            <a href="/BlogDeCafe/index.html">Blog<span>DeCafe</span></a>
-            <ul>
-                <li>
-                    <a href="#index">Inicio</a>
+            <a class="scrollTo" target="header">Blog<span>DeCafe</span></a>
+            <ul id="menu-nav">
+                <li class="scrollTo" target="blog">
+                    <a>Nuestro Blog</a>
                 </li>
 
-                <li>
-                    <a href="#about">Nosotros</a>
+                <li class="scrollTo" target="about">
+                    <a>Nosotros</a>
                 </li>
 
-                <li>
-                    <a href="#cursos">Cursos</a>
+                <li class="scrollTo" target="cursos">
+                    <a>Cursos</a>
                 </li>
 
-                <li>
-                    <a href="#contacto">Contacto</a>
+                <li class="scrollTo" target="contacto">
+                    <a>Contacto</a>
                 </li>
             </ul>
+            <button id="btn-menu">
+              <img src="./assets/icons/menu-hamburguesa.svg" alt="menu">
+            </button>
         </nav>
 
         <section id="index">
@@ -35,7 +38,7 @@
             <div class="content-header">
                 <h1>Blog de cafe con consejos y cursos</h1>
                 <h3>Aprender de los expertos con las mejores recetas y consejos</h3>
-                <button class="arrow" onclick="smoothScroll()">
+                <button class="arrow scrollTo" target="blog" onclick="smoothScroll()">
                     <div id="arrow"></div>
                 </button>
             </div>
@@ -44,8 +47,8 @@
 
     <div class="mainContainer" id="mainContainer">
         <main>  
-            <h2>Nuestro Blog</h2>
-            <section>
+            <h2 id="blog">Nuestro Blog</h2>
+            <section class="nuestro-blog">
                 <article class="card">
                     <img src="https://coruscating-capybara-5b8cef.netlify.app/img/img1.jpg" alt="imagen de cafe">
                     <div>
@@ -74,8 +77,142 @@
                 </article> 
 
             </section>
+
+            <hr>
+
+            <section id="about" class="about">
+              <h2>Sobre Nosotros</h2>
+              <article class="about-card">
+                  <img class="Nos" src="assets/img/baristaCapu.jpg" alt="barista">
+                  <p>Este blog ha sido creado para enseñar a preparar diferentes tipos de café de manera gratuita ya que es una iniciativa para promover el consumo de cafés de calidad y difundir la cultura cafetera nacional, tradicional de nuestra linda tierra colombia. <br> <br> El café es para compartir. Firmemente creemos que la cultura cafeína es algo que todos podemos disfrutar a su manera. ¿Cuál es la mejor taza de café? La que a ti te gusta. Por eso, nuestra visión es crecer una comunidad apasionada por el café, con personas con distintos gustos y niveles de conocimiento del tema.
+              </article>
+            </section>
+
+            <hr>
+
+            <section id="cursos">
+              <h2>CURSOS</h2>
+              <section class="cursos">
+              <article class="Card">
+                <img src="./assets/img/card1cursos.jpg" alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>4 Recetas de Café para Principiantes
+                    
+                  </h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+            possimus id assumenda unde voluptatem porr
+            blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+              
+              <article class="Card">
+                <img src="./assets/img/card2cursos.jpg" alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>Técnicas de Extracción de Café</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+              exercitationem, natus possimus id assumenda un
+            nemo obcaecati blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+              <article class="Card">
+                <img src="./assets/img/baristaCapu.jpg" alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>Taller para Tostar y Moler Granos</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+              exercitationem, natus possimus id assumenda un
+            nemo obcaecati blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+              <article class="Card">
+                <img src="./assets/img/latte.jpg"
+            alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>Taller para preparar café latte</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+              exercitationem, natus possimus id assumenda un
+            nemo obcaecati blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+              <article class="Card">
+                <img src="./assets/img/capuchino.jpg" alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>Taller de preparar capuchino perfecto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+              exercitationem, natus possimus id assumenda un
+            nemo obcaecati blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+              <article class="Card">
+                <img src="./assets/img/female-barista-prepares-espresso-from-coffee-machine-in-caf.jpg" alt="imagen de cafe">
+                <div class="contenido-card">
+                  
+                  <h3>Taller para preparar café Mocca</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+            dolorem repudiandae ea mollitia eos nihil 
+              exercitationem, natus possimus id assumenda un
+            nemo obcaecati blanditiis iure! Quam?</p>
+                  <button>Gratis</button>
+                </div>
+              </article>
+          </section>
+              
+            </section>
+
+            <hr>
+
+            <section id="contacto">
+              <h3 class="titulo-seccion">Contáctanos</h3>
+        
+        
+              <form class="contacto__form" action="https://formspree.io/f/xyyaejew" method="post">
+        
+                <div class="row">
+                  <input
+                    name="nombre"
+                    pattern="[a-zA-Z ]{2,254}"
+                    type="text"
+                    placeholder="Nombre Completo"
+                    class="input-mitad"
+                  />
+                  <input
+                    name="correo"
+                    type="email"
+                    placeholder="Email"
+                    class="input-mitad"
+                  />
+                </div>
+        
+                <textarea
+                  name="mensaje"
+                  minlength="30"
+                  cols="5"
+                  rows="5"
+                  placeholder="Tu Mensaje..."></textarea>
+        
+                <button class="btn-enviar" type="submit">Enviar Mensaje</button>
+              </form>
+              <p class="p-form">¡No dudes en llenar el formulario!</p>
+            </section>                    
+
         </main>
-    
+
+        <hr class="separador-aside">
+
         <aside>
             <h3>Cursos y Talleres</h3>
             <section>
@@ -99,136 +236,51 @@
                 </article>
             </section>
         </aside>
-    </div>
-    <article id="about" class="about">
-        <h2>Sobre Nosotros</h2>
-        <div>
-            <img class="Nos" src="assets/img/baristaCapu.jpg" alt="barista">
-            <p>este blog ha sido creado para enseñar a preparar diferentes tipos de café de manera gratuita ya que es una iniciativa para promover el consumo de cafés de calidad y difundir la cultura cafetera nacional, tradicional de nuestra linda tierra colombia. <br> <br> El café es para compartir. Firmemente creemos que la cultura cafeína es algo que todos podemos disfrutar a su manera. ¿Cuál es la mejor taza de café? La que a ti te gusta. Por eso, nuestra visión es crecer una comunidad apasionada por el café, con personas con distintos gustos y niveles de conocimiento del tema. <br>
+    </div> 
+
+    <footer>
+
+      <div class="footer-enlaces">
+        <ul>
+          <li class="scrollTo" target="blog">
+              <a>Nuestro Blog</a>
+          </li>
+  
+          <li class="scrollTo" target="about">
+              <a>Nosotros</a>
+          </li>
+  
+          <li class="scrollTo" target="cursos">
+              <a>Cursos</a>
+          </li>
+  
+          <li class="scrollTo" target="contacto">
+              <a>Contacto</a>
+          </li>
+      </ul>
+      </div>
+
+      <div class="contenido-footer">
+        <a class="scrollTo" target="header">Blog<span>DeCafe</span></a>
+
+        <div class="iconos">          
+          <a href="#">
+            <img src="./assets/icons/instagram.svg" alt="icono instagram">
+          </a>
+          <a href="#">
+            <img src="./assets/icons/square-facebook.svg" alt="icono facebook">
+          </a>
+          <a href="#">
+            <img src="./assets/icons/linkedin.svg" alt="icono linkedin">
+          </a>          
         </div>
-        <hr>
-    </article>
+        <p>2023 Desarrollado por el equipo Unicornios</p>
+      </div>
 
-   
-    <section id="cursos">
-        <h2>CURSOS</h2>
-        <section class="cursos">
-        <article class="Card">
-          <img src="./assets/img/card1cursos.jpg" alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>4 Recetas de Café para Principiantes
-              
-            </h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-      possimus id assumenda unde voluptatem porr
-      blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-        
-        <article class="Card">
-          <img src="./assets/img/card2cursos.jpg" alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>Técnicas de Extracción de Café</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-        exercitationem, natus possimus id assumenda un
-      nemo obcaecati blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-        <article class="Card">
-          <img src="./assets/img/baristaCapu.jpg" alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>Taller para Tostar y Moler Granos</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-        exercitationem, natus possimus id assumenda un
-      nemo obcaecati blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-        <article class="Card">
-          <img src="./assets/img/latte.jpg"
-      alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>Taller para preparar café latte</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-        exercitationem, natus possimus id assumenda un
-      nemo obcaecati blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-        <article class="Card">
-          <img src="./assets/img/capuchino.jpg" alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>Taller de preparar capuchino perfecto</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-        exercitationem, natus possimus id assumenda un
-      nemo obcaecati blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-        <article class="Card">
-          <img src="./assets/img/female-barista-prepares-espresso-from-coffee-machine-in-caf.jpg" alt="imagen de cafe">
-          <div class="contenido-card">
-            
-            <h3>Taller para preparar café Mocca</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-      dolorem repudiandae ea mollitia eos nihil 
-        exercitationem, natus possimus id assumenda un
-      nemo obcaecati blanditiis iure! Quam?</p>
-            <button>Gratis</button>
-          </div>
-        </article>
-    </section>
-        
-      </section>
-
-      <section id="contacto">
-        <h3 class="titulo-seccion">Contactanos</h3>
-  
-  
-        <form class="contacto__form" action="https://formspree.io/f/xyyaejew" method="post">
-  
-          <div class="row">
-            <input
-              name="nombre"
-              pattern="[a-zA-Z ]{2,254}"
-              type="text"
-              placeholder="Nombre Completo"
-              class="input-mitad"
-            />
-            <input
-              name="correo"
-              type="email"
-              placeholder="Email"
-              class="input-mitad"
-            />
-          </div>
-  
-          <textarea
-            name="mensaje"
-            minlength="30"
-            cols="5"
-            rows="5"
-            placeholder="Tu Mensaje..."
-            class="input-full"></textarea>
-  
-          <button class="btn-enviar" type="submit">Enviar Mensaje</button>
-        </form>
-        <p class="p-form">¡No dudes en llenar el formulario!</p>
-      </section>
-   
-
+      
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/17addb2750.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>

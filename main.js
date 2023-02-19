@@ -1,27 +1,20 @@
-function smoothScroll() {
-    var targetPosition = mainContainer.offsetTop - 100;
-    console.log(targetPosition);
-    var startPosition = window.pageYOffset;
-    var distance = targetPosition - startPosition;
-    var duration = 1000;
-    var start = null;
-    
-    function animation(currentTime) {
-      if (!start) start = currentTime;
-      var progress = currentTime - start;
-      window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-      if (progress < duration) requestAnimationFrame(animation);
-    }
-    
-    function easeInOutCubic(t, b, c, d) {
-      t /= d/2;
-      if (t < 1) return c/2*t*t*t + b;
-      t -= 2;
-      return c/2*(t*t*t + 2) + b;
-    }
-    
-    requestAnimationFrame(animation);
-  }
+const btnMenu = document.getElementById("btn-menu");
+const menuNav = document.getElementById("menu-nav");
+const scrollTo = document.getElementsByClassName("scrollTo");
 
-  var mainContainer = document.getElementById("mainContainer");
-  
+Array.from(scrollTo).forEach(el => {
+  el.addEventListener("click", function (e) {
+    const target = e.currentTarget.getAttribute("target");
+    const sectionObjetivo = document.getElementById(target);
+    const position = sectionObjetivo.offsetTop - 100;
+    window.scrollTo({
+      top: position, behavior: "smooth"
+    })
+  })
+})
+
+btnMenu.addEventListener("click", mostrarMenu);
+
+function mostrarMenu (){
+  menuNav.classList.toggle("mostrar-menu")
+}
