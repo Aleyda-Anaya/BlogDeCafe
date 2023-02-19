@@ -71,14 +71,14 @@ nav ul li:hover{
     background-color: var(--primary-color);
 }
 
-nav ul li>a{
+nav ul li{
     transition: color .2s ease-in;
     text-decoration: none;
     color: #eee9e4;
     font-size: 20px;
 }
 
-nav ul li:hover a{
+nav ul li:hover{
     color: var(--secondary-color);
 }
 
@@ -182,7 +182,6 @@ header > section> .content-header> h3{
     }
     
 }
-
 .mainContainer{
     display: flex;
     flex-wrap: wrap;
@@ -205,13 +204,19 @@ main{
     align-items: center;
 }
 
-main>h2{
+#blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blog h2{
     color: var(--primary-color);
     font-size: 40px;
     margin: 0;
 }
 
-main> .nuestro-blog{
+.nuestro-blog{
     display: flex;
     gap: 20px;
     width: 100%;
@@ -264,6 +269,7 @@ main> .nuestro-blog{
     border: none;
     padding: 16px;
     font-size: 15px;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
 }
 
 .card div>button:hover{
@@ -337,6 +343,7 @@ aside>section{
     border: none;
     padding: 15px;
     font-size: 15px;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
 }
 
 .main__aside__article>button:hover{
@@ -377,7 +384,7 @@ aside>section{
     max-width: 450px;
     width: 100%;
     object-fit: cover;
-    box-shadow: 5px 5px 50px #2e2e2e1b;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
     border-radius: 10px;
 }
 
@@ -394,7 +401,8 @@ aside>section{
 
   #cursos h2{
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
   }
 
   .cursos{
@@ -450,6 +458,7 @@ aside>section{
     border: none;
     padding: 10px 16px;
     font-size: 15px;
+    box-shadow: 4px 4px 4px 0 #30303096, -5px -5px 3px 0 #fff;
 
   }
 
@@ -468,7 +477,7 @@ aside>section{
   .titulo-seccion{
     color: #d09030;
     text-align: center;
-    font-size: 3rem;
+    font-size: 40px;
   }
 
   .contacto__form{
@@ -563,7 +572,7 @@ aside>section{
     cursor: pointer;
 }
 
-.footer-enlaces ul li>a{
+.footer-enlaces ul li{
     transition: color .2s ease-in;
     text-decoration: none;
     color: #eee9e4;
@@ -571,7 +580,7 @@ aside>section{
     padding: 10px;
 }
 
-.footer-enlaces ul li:hover a{
+.footer-enlaces ul li:hover{
     color: var(--primary-color);
 }
 
@@ -613,6 +622,7 @@ color: white;
 
 .contenido-footer p{
     margin: 0;
+    text-align: center;
 }
 
 @media screen and (max-width: 1261px) {
